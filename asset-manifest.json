@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/News_App/static/css/main.eac68025.chunk.css",
+    "main.js": "/News_App/static/js/main.6361f956.chunk.js",
+    "main.js.map": "/News_App/static/js/main.6361f956.chunk.js.map",
+    "runtime-main.js": "/News_App/static/js/runtime-main.ca954952.js",
+    "runtime-main.js.map": "/News_App/static/js/runtime-main.ca954952.js.map",
+    "static/js/2.831255bd.chunk.js": "/News_App/static/js/2.831255bd.chunk.js",
+    "static/js/2.831255bd.chunk.js.map": "/News_App/static/js/2.831255bd.chunk.js.map",
+    "static/js/3.e05a4cc4.chunk.js": "/News_App/static/js/3.e05a4cc4.chunk.js",
+    "static/js/3.e05a4cc4.chunk.js.map": "/News_App/static/js/3.e05a4cc4.chunk.js.map",
+    "index.html": "/News_App/index.html",
+    "static/css/main.eac68025.chunk.css.map": "/News_App/static/css/main.eac68025.chunk.css.map",
+    "static/js/2.831255bd.chunk.js.LICENSE.txt": "/News_App/static/js/2.831255bd.chunk.js.LICENSE.txt",
+    "static/media/bloomberg.062518ca.png": "/News_App/static/media/bloomberg.062518ca.png",
+    "static/media/cnbc.d34ec349.png": "/News_App/static/media/cnbc.d34ec349.png",
+    "static/media/foxibusiness.e5891662.png": "/News_App/static/media/foxibusiness.e5891662.png",
+    "static/media/reuters.e9a16ac2.png": "/News_App/static/media/reuters.e9a16ac2.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ca954952.js",
+    "static/js/2.831255bd.chunk.js",
+    "static/css/main.eac68025.chunk.css",
+    "static/js/main.6361f956.chunk.js"
+  ]
+}
