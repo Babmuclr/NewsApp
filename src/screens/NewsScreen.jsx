@@ -5,7 +5,14 @@ import './NewsScreen.css';
 import ArticleScreen from './ArticleScreen';
 import Header from '../components/Header';
 
-function TabPanel(props) {
+const returnTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
+const TabPanel = (props) => {
     const { children, value, index, ...other } = props;
   
     return (
@@ -34,34 +41,37 @@ const NewsScreen = () => {
         <div>
             <Header index={1}/>
             <div className="screen">
-            <Tabs
-                value={tabIndex}
-                onChange={handleChange}
-                variant="scrollable"
-                scrollButtons="auto"
-                className="tab"
-            >
-                <Tab label="最新記事" />
-                <Tab label="決算" />
-                <Tab label="有名銘柄" />
-                <Tab label="電気自動車" />
-                <Tab label="仮想通貨" />
-            </Tabs>
-            <TabPanel value={tabIndex} index={0}>
-                <ArticleScreen mode={"importants"} />
-            </TabPanel>
-            <TabPanel value={tabIndex} index={1}>
-                <ArticleScreen mode={"earnings"} />
-            </TabPanel>
-            <TabPanel value={tabIndex} index={2}>
-                <ArticleScreen mode={"stocks"} />
-            </TabPanel>
-            <TabPanel value={tabIndex} index={3}>
-                <ArticleScreen mode={"stocks"} />
-            </TabPanel>
-            <TabPanel value={tabIndex} index={4}>
-                <ArticleScreen mode={"stocks"} />
-            </TabPanel>
+                <Tabs
+                    value={tabIndex}
+                    onChange={handleChange}
+                    variant="scrollable"
+                    scrollButtons="auto"
+                    className="tab"
+                >
+                    <Tab label="最新記事" />
+                    <Tab label="決算" />
+                    <Tab label="有名銘柄" />
+                    <Tab label="電気自動車" />
+                    <Tab label="仮想通貨" />
+                </Tabs>
+                <TabPanel value={tabIndex} index={0}>
+                    <ArticleScreen mode={"importants"} />
+                </TabPanel>
+                <TabPanel value={tabIndex} index={1}>
+                    <ArticleScreen mode={"earnings"} />
+                </TabPanel>
+                <TabPanel value={tabIndex} index={2}>
+                    <ArticleScreen mode={"stocks"} />
+                </TabPanel>
+                <TabPanel value={tabIndex} index={3}>
+                    <ArticleScreen mode={"stocks"} />
+                </TabPanel>
+                <TabPanel value={tabIndex} index={4}>
+                    <ArticleScreen mode={"stocks"} />
+                </TabPanel>
+                <button onClick={returnTop} >
+                    Topに戻る
+                </button>
             </div>
         </div>
 );

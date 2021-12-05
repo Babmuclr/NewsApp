@@ -1,4 +1,4 @@
-import React ,  { StyleSheet, useState } from 'react';
+import React ,  { useState } from 'react';
 import titleImg from "../assets/news.png";
 import { Link } from "react-router-dom";
 import { Tab, Tabs } from '@mui/material';
