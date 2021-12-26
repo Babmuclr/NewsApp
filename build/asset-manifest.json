@@ -1,26 +1,27 @@
 {
   "files": {
-    "main.css": "/NewsApp/static/css/main.f6976ac3.chunk.css",
-    "main.js": "/NewsApp/static/js/main.9011b3d9.chunk.js",
-    "main.js.map": "/NewsApp/static/js/main.9011b3d9.chunk.js.map",
-    "runtime-main.js": "/NewsApp/static/js/runtime-main.70551056.js",
-    "runtime-main.js.map": "/NewsApp/static/js/runtime-main.70551056.js.map",
-    "static/js/2.1b8ad1a4.chunk.js": "/NewsApp/static/js/2.1b8ad1a4.chunk.js",
-    "static/js/2.1b8ad1a4.chunk.js.map": "/NewsApp/static/js/2.1b8ad1a4.chunk.js.map",
-    "static/js/3.f240f60f.chunk.js": "/NewsApp/static/js/3.f240f60f.chunk.js",
-    "static/js/3.f240f60f.chunk.js.map": "/NewsApp/static/js/3.f240f60f.chunk.js.map",
+    "main.css": "/NewsApp/static/css/main.5ea66d14.chunk.css",
+    "main.js": "/NewsApp/static/js/main.2a851ccd.chunk.js",
+    "main.js.map": "/NewsApp/static/js/main.2a851ccd.chunk.js.map",
+    "runtime-main.js": "/NewsApp/static/js/runtime-main.1cbcd372.js",
+    "runtime-main.js.map": "/NewsApp/static/js/runtime-main.1cbcd372.js.map",
+    "static/js/2.24e074b6.chunk.js": "/NewsApp/static/js/2.24e074b6.chunk.js",
+    "static/js/2.24e074b6.chunk.js.map": "/NewsApp/static/js/2.24e074b6.chunk.js.map",
+    "static/js/3.b19f1deb.chunk.js": "/NewsApp/static/js/3.b19f1deb.chunk.js",
+    "static/js/3.b19f1deb.chunk.js.map": "/NewsApp/static/js/3.b19f1deb.chunk.js.map",
     "index.html": "/NewsApp/index.html",
-    "static/css/main.f6976ac3.chunk.css.map": "/NewsApp/static/css/main.f6976ac3.chunk.css.map",
-    "static/js/2.1b8ad1a4.chunk.js.LICENSE.txt": "/NewsApp/static/js/2.1b8ad1a4.chunk.js.LICENSE.txt",
-    "static/media/bloomberg.062518ca.png": "/NewsApp/static/media/bloomberg.062518ca.png",
-    "static/media/cnbc.d34ec349.png": "/NewsApp/static/media/cnbc.d34ec349.png",
-    "static/media/foxibusiness.e5891662.png": "/NewsApp/static/media/foxibusiness.e5891662.png",
-    "static/media/reuters.e9a16ac2.png": "/NewsApp/static/media/reuters.e9a16ac2.png"
+    "static/css/main.5ea66d14.chunk.css.map": "/NewsApp/static/css/main.5ea66d14.chunk.css.map",
+    "static/js/2.24e074b6.chunk.js.LICENSE.txt": "/NewsApp/static/js/2.24e074b6.chunk.js.LICENSE.txt",
+    "static/media/bloomberg.e44a693e.png": "/NewsApp/static/media/bloomberg.e44a693e.png",
+    "static/media/businessinsider.f8ffac6a.png": "/NewsApp/static/media/businessinsider.f8ffac6a.png",
+    "static/media/cnbc.f70b4d48.png": "/NewsApp/static/media/cnbc.f70b4d48.png",
+    "static/media/forbes.7af2fcb7.png": "/NewsApp/static/media/forbes.7af2fcb7.png",
+    "static/media/motleyfool.9f147ecc.png": "/NewsApp/static/media/motleyfool.9f147ecc.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.70551056.js",
-    "static/js/2.1b8ad1a4.chunk.js",
-    "static/css/main.f6976ac3.chunk.css",
-    "static/js/main.9011b3d9.chunk.js"
+    "static/js/runtime-main.1cbcd372.js",
+    "static/js/2.24e074b6.chunk.js",
+    "static/css/main.5ea66d14.chunk.css",
+    "static/js/main.2a851ccd.chunk.js"
   ]
 }
