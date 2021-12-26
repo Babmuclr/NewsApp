@@ -10,20 +10,39 @@ const Header = (props) => {
     const handleChange = (event, newValue) => {
         setTabIndex(newValue);
     };
-    console.log(tabIndex);
+
+    const [size, setSize] = useState({ 'width': window.innerWidth, 'height': window.innerHeight });
+    window.addEventListener('resize', function () {
+    setSize({ 'width': window.innerWidth, 'height': window.innerHeight });
+    }, true);
+
     return (
     <div className="header">   
-        <h1><img src={titleImg} width="100" height="40" alt="logo" /></h1>
-        <Tabs
-            value={tabIndex}
-            onChange={handleChange}
-            variant="scrollable"
-            scrollButtons="auto"
-        >
-            <Tab label="ホーム" component={Link} to="/" />
-            <Tab label="ニュースポータル" component={Link} to="/news" />
-            <Tab label="FX予測の結果" component={Link} to="/fxprophet" />
-        </Tabs>
+        <h1><img src={titleImg} width="20%"  alt="logo" /></h1>
+        {size.width > 375 * 2 ? 
+            <Tabs
+                value={tabIndex}
+                onChange={handleChange}
+                centered
+            >
+                <Tab label="ホーム" component={Link} to="/home" />
+                <Tab label="ニュースポータル" component={Link} to="/" />
+                <Tab label="FX予測の結果" component={Link} to="/fxprophet" />
+                <Tab label="ブログ・研究" component={Link} to="/blog" />
+            </Tabs> 
+        : 
+            <Tabs
+                value={tabIndex}
+                onChange={handleChange}
+                variant="scrollable"
+                scrollButtons="auto"
+            >
+                <Tab label="ホーム" component={Link} to="/home" />
+                <Tab label="ニュースポータル" component={Link} to="/" />
+                <Tab label="FX予測の結果" component={Link} to="/fxprophet" />
+                <Tab label="ブログ・研究" component={Link} to="/blog" />
+            </Tabs>
+        }
     </div>
   );
 }

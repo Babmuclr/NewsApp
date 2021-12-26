@@ -11,7 +11,7 @@ import cnbcURL from '../assets/cnbc.png';
 import thestreetURL from '../assets/thestreet.png';
 import foxbusinessURL from '../assets/foxibusiness.png';
 
-export default function MediaCard(props) {
+export default function WebMediaCard(props) {
     let src;
     switch (props.source) {
         case "Reuters":
@@ -35,19 +35,19 @@ export default function MediaCard(props) {
         }
     const date = new Date(props.pubDate.toDate());
   return (
-    <Card sx={{ maxWidth: 150, maxHeight: 250, margin: 0}}>
+    <Card sx={{ maxWidth: 400, maxHeight: 300 }}>
     <CardActionArea  href={props.link}>
         <CardMedia
             component="img"
-            height="75"
+            height="150"
             src={src}
             alt={props.id}
         />
         <CardContent>
-            <Typography gutterBottom variant="body2" component="div">
+            <Typography gutterBottom variant="body1" component="div">
                 {props.title}
             </Typography>
-            <Typography variant="caption" color="text.secondary">
+            <Typography variant="body2" color="text.secondary">
                 {date.toDateString()}
             </Typography>
         </CardContent>

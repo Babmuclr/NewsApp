@@ -4,8 +4,13 @@ import { db } from '../index';
 import { collection,  getDocs, query, orderBy, limit } from "firebase/firestore";
 import './ArticleScreen.css';
 import MediaCard from '../components/Card';
+import WebMediaCard from '../components/WebCard';
 
 const ArticleScreen = props => {
+    const [size, setSize] = useState({ 'width': window.innerWidth, 'height': window.innerHeight });
+  window.addEventListener('resize', function () {
+    setSize({ 'width': window.innerWidth, 'height': window.innerHeight });
+  }, true);
     const [articles, setArticles] = useState([])
     useEffect(() => {
         async function fetchData() {
@@ -19,7 +24,6 @@ const ArticleScreen = props => {
                     source: doc.data().source,
                     link: doc.data().link,
                     pubDate: doc.data().pubDate,
-                    stock: doc.data().stock,
                 })
             });
             setArticles(nowArticles);
@@ -37,18 +41,33 @@ const ArticleScreen = props => {
         return (
             <div className="articles">
                 <div className="grid">
-                    {articles.map(
-                        (article)=>(
-                            <MediaCard 
-                                title={article.title} 
-                                source={article.source} 
-                                id={article.id} 
-                                link={article.link}
-                                pubDate={article.pubDate}
-                                stock={article.stock}
-                                key={article.id}
-                            />
-                    ))}
+                    {size.width > 375 * 2 ? 
+                        articles.map(
+                            (article)=>(
+                                <WebMediaCard 
+                                    title={article.title} 
+                                    source={article.source} 
+                                    id={article.id} 
+                                    link={article.link}
+                                    pubDate={article.pubDate}
+                                    key={article.id}
+                                />
+                            )
+                        )
+                    : 
+                        articles.map(
+                            (article)=>(
+                                <MediaCard 
+                                    title={article.title} 
+                                    source={article.source} 
+                                    id={article.id} 
+                                    link={article.link}
+                                    pubDate={article.pubDate}
+                                    key={article.id}
+                                />
+                            )
+                        )
+                } 
                 </div>
             </div>
         )

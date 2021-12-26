@@ -1,6 +1,6 @@
 {
   "short_name": "経済ニュースポータル",
-  "name": "Create React App Sample",
+  "name": "アメリカで見られている経済ニュースの一覧",
   "icons": [
     {
       "src": "favicon.ico",

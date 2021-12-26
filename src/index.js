@@ -13,6 +13,7 @@ import {
 import HomeScreen from './screens/HomeScreen';
 import NewsScreen from './screens/NewsScreen';
 import FxProphetScreen from './screens/FxProphetScreen';
+import BlogScreen from './screens/BlogScreen';
 
 const firebaseConfig = {
     apiKey: "AIzaSyAof90DuP39Hm73wgtRuLtSIcSmjwCcH5E",
@@ -31,9 +32,10 @@ const rootElement = document.getElementById("root");
 render(
     <BrowserRouter>
         <Routes>
-            <Route path="/" element={<HomeScreen/>}/>
-            <Route path="/news" element={<NewsScreen/>}/>
+            <Route path="/" element={<NewsScreen/>}/>
+            <Route path="/home" element={<HomeScreen/>}/>
             <Route path="/fxprophet" element={<FxProphetScreen/>}/>
+            <Route path="/blog" element={<BlogScreen/>}/>
         </Routes>
     </BrowserRouter>, 
     rootElement
