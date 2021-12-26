@@ -10,7 +10,7 @@ const BlogScreen = props => {
     
     return (
         <>
-        <Header index={2}/>
+        <Header index={3}/>
             <div className='inner'>
                 <div className='exsite'>
                     <Iframe 
