@@ -61,7 +61,7 @@ const HomeScreen = (props) => {
 
                     <div className='exsite'>
                         <a href="http://qiita.com/Babmuclr" data-qiita-widget data-username="Babmuclr">Qiita投稿</a>
-                        <ScriptTag type="text/javascript" src="https://suin.github.io/qiita-widget/widget.js" />
+                        <ScriptTag type="text/javascript" src="https://suin.github.io/qiita-widget/widget.js" defer/>
                     </div>
 
                     <h1>最後に一言</h1>
