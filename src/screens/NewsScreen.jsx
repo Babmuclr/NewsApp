@@ -1,18 +1,12 @@
 import React, { useState } from 'react';
-import { Tab, Tabs, Button } from '@mui/material';
+import { Tab, Tabs } from '@mui/material';
 import { Link } from "react-router-dom";
 
 import './NewsScreen.css';
 import ArticleScreen from './ArticleScreen';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-
-const returnTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
+import FootButton from '../components/Button';
 
 const NewsScreen = (props) => {
     const [tabIndex, setTabIndex] = useState(Number(props.mode));
@@ -55,17 +49,7 @@ const NewsScreen = (props) => {
                     <Tab label="MotleyFool" component={Link} to="/news/motleyfool/"/>
                 </Tabs>
                 <ArticleScreen mode={list_article[Number(props.mode)]} />
-                <Button 
-                    onClick={returnTop} 
-                    variant="outlined" 
-                    style={{
-                        width: "100%",
-                        marginTop: "40px",
-                        height: "60px"
-                    }}
-                >
-                    Topに戻る
-                </Button>
+                <FootButton/>
             </div>
             <Footer/>
         </div>

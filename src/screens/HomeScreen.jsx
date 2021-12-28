@@ -3,16 +3,9 @@ import './HomeScreen.css';
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { Button } from '@mui/material';
+import FootButton from '../components/Button';
 import ScriptTag from 'react-script-tag';
 import Iframe from 'react-iframe';
-
-const returnTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
 
 const HomeScreen = (props) => {
     return (
@@ -70,17 +63,7 @@ const HomeScreen = (props) => {
                     <div className='explanation'>
                         皆様の知識を高め、興味を持つ記事に出会えることを祈っています。
                     </div>
-                    <Button 
-                        onClick={returnTop} 
-                        variant="outlined" 
-                        style={{
-                            width: "100%",
-                            marginTop: "40px",
-                            height: "60px"
-                        }}
-                    >
-                        Topに戻る
-                    </Button>
+                    <FootButton/>
                 </div>
             </div>
         </>
