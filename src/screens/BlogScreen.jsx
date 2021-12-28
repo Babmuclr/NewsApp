@@ -5,12 +5,13 @@ import Header from '../components/Header';
 import Iframe from 'react-iframe';
 
 import ScriptTag from 'react-script-tag';
+import Footer from '../components/Footer';
 
 const BlogScreen = props => {
     
     return (
         <>
-        <Header index={3}/>
+            <Header/>
             <div className='inner'>
                 <div className='exsite'>
                     <Iframe 
@@ -28,6 +29,7 @@ const BlogScreen = props => {
                     <ScriptTag type="text/javascript" src="https://suin.github.io/qiita-widget/widget.js" defer />
                 </div>
             </div>
+            <Footer index={3}/>
         </>
     );
 }

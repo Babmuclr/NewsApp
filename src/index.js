@@ -32,10 +32,20 @@ const rootElement = document.getElementById("root");
 render(
     <BrowserRouter>
         <Routes>
-            <Route path="/" element={<NewsScreen/>}/>
+            <Route path="/" element={<NewsScreen mode="0"/>}/>
             <Route path="/home" element={<HomeScreen/>}/>
             <Route path="/fxprophet" element={<FxProphetScreen/>}/>
             <Route path="/blog" element={<BlogScreen/>}/>
+            <Route path="/news/earnings/" element={<NewsScreen mode="1"/>}/>
+            <Route path="/news/bloomberg/" element={<NewsScreen mode="2"/>}/>
+            <Route path="/news/reuters/" element={<NewsScreen mode="3"/>}/>
+            <Route path="/news/cnbc/" element={<NewsScreen mode="4"/>}/>
+            <Route path="/news/thestreet/" element={<NewsScreen mode="5"/>}/>
+            <Route path="/news/foxbusiness/" element={<NewsScreen mode="6"/>}/>
+            <Route path="/news/wsj/" element={<NewsScreen mode="7"/>}/>
+            <Route path="/news/forbes/" element={<NewsScreen mode="8"/>}/>
+            <Route path="/news/businessinsider/" element={<NewsScreen mode="9"/>}/>
+            <Route path="/news/motleyfool/" element={<NewsScreen mode="10"/>}/>
         </Routes>
     </BrowserRouter>, 
     rootElement

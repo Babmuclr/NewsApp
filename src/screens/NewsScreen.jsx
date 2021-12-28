@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-import { Tab, Tabs, Typography, Box, Button } from '@mui/material';
+import { Tab, Tabs, Button } from '@mui/material';
+import { Link } from "react-router-dom";
 
 import './NewsScreen.css';
 import ArticleScreen from './ArticleScreen';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 const returnTop = () => {
     window.scrollTo({
@@ -12,87 +14,47 @@ const returnTop = () => {
     });
   };
 
-const TabPanel = (props) => {
-    const { children, value, index, ...other } = props;
-  
-    return (
-      <div
-        role="tabpanel"
-        hidden={value !== index}
-        id={`simple-tabpanel-${index}`}
-        aria-labelledby={`simple-tab-${index}`}
-        {...other}
-      >
-        {value === index && (
-          <Box sx={{ p: 0 }}>
-            <Typography>{children}</Typography>
-          </Box>
-        )}
-      </div>
-    );
-  }
-
-const NewsScreen = () => {
-    const [tabIndex, setTabIndex] = useState(0);
+const NewsScreen = (props) => {
+    const [tabIndex, setTabIndex] = useState(Number(props.mode));
     const handleChange = (event, newValue) => {
         setTabIndex(newValue);
     };
+    const list_article = [
+        "importants",
+        "earnings",
+        "Bloomberg",
+        "Reuters",
+        "CNBC",
+        "TheStreet",
+        "FoxBusiness",
+        "TheWallStreetJournal",
+        "Forbes",
+        "BusinessInsider",
+        "MotleyFool",
+    ];
     return (
         <div>
-            <Header index={1}/>
+            <Header/>
             <div className="screen">
                 <Tabs
                     value={tabIndex}
                     onChange={handleChange}
                     variant="scrollable"
                     scrollButtons="auto"
-                    className="tab"
                 >
-                    <Tab label="最新記事" />
-                    <Tab label="決算" />
-                    <Tab label="Bloomberg" />
-                    <Tab label="Reuters" />
-                    <Tab label="CNBC" />
-                    <Tab label="TheStreet" />
-                    <Tab label="FoxBusiness" />
-                    <Tab label="WallStreetJournal" />
-                    <Tab label="Forbes" />
-                    <Tab label="BusinessInsider" />
-                    <Tab label="MotleyFool" />
+                    <Tab label="最新記事" component={Link} to="/"/>
+                    <Tab label="決算" component={Link} to="/news/earnings/"/>
+                    <Tab label="Bloomberg" component={Link} to="/news/bloomberg/"/>
+                    <Tab label="Reuters" component={Link} to="/news/reuters/"/>
+                    <Tab label="CNBC" component={Link} to="/news/cnbc/"/>
+                    <Tab label="TheStreet" component={Link} to="/news/thestreet/"/>
+                    <Tab label="FoxBusiness" component={Link} to="/news/foxbusiness/"/>
+                    <Tab label="WallStreetJournal" component={Link} to="/news/wsj/"/>
+                    <Tab label="Forbes" component={Link} to="/news/forbes/"/>
+                    <Tab label="BusinessInsider" component={Link} to="/news/businessinsider/"/>
+                    <Tab label="MotleyFool" component={Link} to="/news/motleyfool/"/>
                 </Tabs>
-                <TabPanel value={tabIndex} index={0}>
-                    <ArticleScreen mode={"importants"} />
-                </TabPanel>
-                <TabPanel value={tabIndex} index={1}>
-                    <ArticleScreen mode={"earnings"} />
-                </TabPanel>
-                <TabPanel value={tabIndex} index={2}>
-                    <ArticleScreen mode={"Bloomberg"} />
-                </TabPanel>
-                <TabPanel value={tabIndex} index={3}>
-                    <ArticleScreen mode={"Reuters"} />
-                </TabPanel>
-                <TabPanel value={tabIndex} index={4}>
-                    <ArticleScreen mode={"CNBC"} />
-                </TabPanel>
-                <TabPanel value={tabIndex} index={5}>
-                    <ArticleScreen mode={"TheStreet"} />
-                </TabPanel>
-                <TabPanel value={tabIndex} index={6}>
-                    <ArticleScreen mode={"FoxBusiness"} />
-                </TabPanel>
-                <TabPanel value={tabIndex} index={7}>
-                    <ArticleScreen mode={"TheWallStreetJournal"} />
-                </TabPanel>
-                <TabPanel value={tabIndex} index={8}>
-                    <ArticleScreen mode={"Forbes"} />
-                </TabPanel>
-                <TabPanel value={tabIndex} index={9}>
-                    <ArticleScreen mode={"BusinessInsider"} />
-                </TabPanel>
-                <TabPanel value={tabIndex} index={10}>
-                    <ArticleScreen mode={"MotleyFool"} />
-                </TabPanel>
+                <ArticleScreen mode={list_article[Number(props.mode)]} />
                 <Button 
                     onClick={returnTop} 
                     variant="outlined" 
@@ -105,6 +67,7 @@ const NewsScreen = () => {
                     Topに戻る
                 </Button>
             </div>
+            <Footer index={1}/>
         </div>
 );
 }

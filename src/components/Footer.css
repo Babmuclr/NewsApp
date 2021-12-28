@@ -1,6 +1,7 @@
-.header{
+.footer{
     width: 96%;
-    margin: auto 0;
+    margin: auto;
+    margin-bottom: 60px;
     text-align: center;
 }
 

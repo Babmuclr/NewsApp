@@ -4,7 +4,6 @@ import { db } from '../index';
 import { collection,  getDocs, query, orderBy, limit } from "firebase/firestore";
 import './ArticleScreen.css';
 import MediaCard from '../components/Card';
-import WebMediaCard from '../components/WebCard';
 
 const ArticleScreen = props => {
     const [size, setSize] = useState({ 'width': window.innerWidth, 'height': window.innerHeight });
@@ -41,21 +40,7 @@ const ArticleScreen = props => {
         return (
             <div className="articles">
                 <div className="grid">
-                    {size.width > 375 * 2 ? 
-                        articles.map(
-                            (article)=>(
-                                <WebMediaCard 
-                                    title={article.title} 
-                                    source={article.source} 
-                                    id={article.id} 
-                                    link={article.link}
-                                    pubDate={article.pubDate}
-                                    key={article.id}
-                                />
-                            )
-                        )
-                    : 
-                        articles.map(
+                    {articles.map(
                             (article)=>(
                                 <MediaCard 
                                     title={article.title} 
@@ -64,10 +49,11 @@ const ArticleScreen = props => {
                                     link={article.link}
                                     pubDate={article.pubDate}
                                     key={article.id}
+                                    size={size.width}
                                 />
                             )
                         )
-                } 
+                    } 
                 </div>
             </div>
         )

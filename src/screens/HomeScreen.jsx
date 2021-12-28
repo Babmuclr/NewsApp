@@ -2,6 +2,7 @@ import React from 'react';
 import './HomeScreen.css';
 
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 import { Button } from '@mui/material';
 import ScriptTag from 'react-script-tag';
 import Iframe from 'react-iframe';
@@ -16,7 +17,7 @@ const returnTop = () => {
 const HomeScreen = (props) => {
     return (
         <>
-            <Header index={0}/>
+            <Header />
             <div className="inner">
                 <div>
                     <h1>本サイトの目的</h1>
@@ -44,7 +45,7 @@ const HomeScreen = (props) => {
                         </blockquote> 
                         <ScriptTag type="text/javascript" src="https://platform.twitter.com/widgets.js" />
                     </div>
-                    <h2>ブログ・研究</h2>
+                    <h2>ブログ</h2>
                     <div className='explanation2'>
                         私見をnoteで、掲載しています。読んだ論文や技術について、Qiitaに投稿しています。
                     </div>
@@ -80,9 +81,8 @@ const HomeScreen = (props) => {
                         Topに戻る
                     </Button>
                 </div>
-                
-                
             </div>
+            <Footer index={0}/>
         </>
     );
 }
