@@ -1,28 +1,16 @@
-import React ,  { useState } from 'react';
-import { Link } from "react-router-dom";
-import { Tab, Tabs } from '@mui/material';
+import React from 'react';
 import "./Footer.css";
 
 
-const Footer = (props) => {
-    const [tabIndex, setTabIndex] = useState(props.index);
-    const handleChange = (event, newValue) => {
-        setTabIndex(newValue);
-    };
-
+const Footer = () => {
     return (
     <div className="footer">
-        {<Tabs
-            value={tabIndex}
-            onChange={handleChange}
-            centered
-        >
-            <Tab label="ホーム" component={Link} to="/home" />
-            <Tab label="ニュース" component={Link} to="/" />
-            <Tab label="FX予測" component={Link} to="/fxprophet" />
-            <Tab label="ブログ" component={Link} to="/blog" />
-        </Tabs>
-        }
+        <ul className="navi">
+            <li className='nav-list-item'> <a href="/home/">ホーム</a></li>
+            <li className='nav-list-item'> <a href="/">ニュース</a></li>
+            <li className='nav-list-item'> <a href="/fxprophet/">FX予測</a></li>
+            <li className='nav-list-item'> <a href="/blog/">ブログ</a></li>
+        </ul>
     </div>
   );
 }

@@ -33,9 +33,9 @@ render(
     <BrowserRouter>
         <Routes>
             <Route path="/" element={<NewsScreen mode="0"/>}/>
-            <Route path="/home" element={<HomeScreen/>}/>
-            <Route path="/fxprophet" element={<FxProphetScreen/>}/>
-            <Route path="/blog" element={<BlogScreen/>}/>
+            <Route path="/home/" element={<HomeScreen/>}/>
+            <Route path="/fxprophet/" element={<FxProphetScreen/>}/>
+            <Route path="/blog/" element={<BlogScreen/>}/>
             <Route path="/news/earnings/" element={<NewsScreen mode="1"/>}/>
             <Route path="/news/bloomberg/" element={<NewsScreen mode="2"/>}/>
             <Route path="/news/reuters/" element={<NewsScreen mode="3"/>}/>

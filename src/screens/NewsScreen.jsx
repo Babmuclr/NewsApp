@@ -67,7 +67,7 @@ const NewsScreen = (props) => {
                     Topに戻る
                 </Button>
             </div>
-            <Footer index={1}/>
+            <Footer/>
         </div>
 );
 }

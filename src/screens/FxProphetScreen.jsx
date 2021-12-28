@@ -6,17 +6,17 @@ import Footer from '../components/Footer'
 
 import ScriptTag from 'react-script-tag';
 
-const FxProphetScreen = props => {
+const FxProphetScreen = (props) => {
     return (
         <>
             <Header/>
+            <Footer/>
             <div className='inner'>
                 <div className='timeLine'>
                     <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/prophetFXtrade?ref_src=twsrc%5Etfw">Tweets by prophetFXtrade</a> 
                     <ScriptTag type="text/javascript" src="https://platform.twitter.com/widgets.js" />
                 </div> 
             </div>
-            <Footer index={2}/>
         </>
     );
 }

@@ -18,6 +18,7 @@ const HomeScreen = (props) => {
     return (
         <>
             <Header />
+            <Footer/>
             <div className="inner">
                 <div>
                     <h1>本サイトの目的</h1>
@@ -82,7 +83,6 @@ const HomeScreen = (props) => {
                     </Button>
                 </div>
             </div>
-            <Footer index={0}/>
         </>
     );
 }
