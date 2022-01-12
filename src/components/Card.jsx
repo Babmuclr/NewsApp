@@ -10,10 +10,7 @@ import bloombergURL from '../assets/bloomberg.png';
 import cnbcURL from '../assets/cnbc.png';
 import thestreetURL from '../assets/thestreet.png';
 import foxbusinessURL from '../assets/foxbusiness.png';
-import businessInsiderURL from "../assets/businessinsider.png";
-import forbesURL from "../assets/forbes.png";
 import wsjURL from "../assets/wsj.png";
-import motelyfoolURL from "../assets/motleyfool.png";
 
 export default function MediaCard(props) {
     let src;
@@ -33,17 +30,8 @@ export default function MediaCard(props) {
         case "FoxBusiness":
             src=foxbusinessURL;
             break;
-        case "BusinessInsider":
-            src=businessInsiderURL;
-            break;
         case "TheWallStreetJournal":
             src=wsjURL;
-            break;
-        case "Forbes":
-            src=forbesURL;
-            break;
-        case "MotleyFool":
-            src=motelyfoolURL;
             break;
         default:
             src=bloombergURL;

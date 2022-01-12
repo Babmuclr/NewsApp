@@ -15,16 +15,12 @@ const NewsScreen = (props) => {
     };
     const list_article = [
         "importants",
-        "earnings",
         "Bloomberg",
         "Reuters",
         "CNBC",
         "TheStreet",
         "FoxBusiness",
         "TheWallStreetJournal",
-        "Forbes",
-        "BusinessInsider",
-        "MotleyFool",
     ];
     return (
         <div>
@@ -37,16 +33,12 @@ const NewsScreen = (props) => {
                     scrollButtons="auto"
                 >
                     <Tab label="最新記事" component={Link} to="/"/>
-                    <Tab label="決算" component={Link} to="/news/earnings/"/>
                     <Tab label="Bloomberg" component={Link} to="/news/bloomberg/"/>
                     <Tab label="Reuters" component={Link} to="/news/reuters/"/>
                     <Tab label="CNBC" component={Link} to="/news/cnbc/"/>
                     <Tab label="TheStreet" component={Link} to="/news/thestreet/"/>
                     <Tab label="FoxBusiness" component={Link} to="/news/foxbusiness/"/>
                     <Tab label="WallStreetJournal" component={Link} to="/news/wsj/"/>
-                    <Tab label="Forbes" component={Link} to="/news/forbes/"/>
-                    <Tab label="BusinessInsider" component={Link} to="/news/businessinsider/"/>
-                    <Tab label="MotleyFool" component={Link} to="/news/motleyfool/"/>
                 </Tabs>
                 <ArticleScreen mode={list_article[Number(props.mode)]} />
                 <FootButton/>
