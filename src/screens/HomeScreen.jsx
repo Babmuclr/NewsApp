@@ -24,7 +24,7 @@ const HomeScreen = (props) => {
                     <h2>ニュースポータル</h2>
                     <div className='explanation2'>
                     アメリカでよく読まれている記事を、30分おきに更新します。
-                    Bloomberg、Reuters、CNBC、TheStreet、FoxBusiness、WallStreetJoournalの合計6つのサイトの最新記事をタイトルのみ翻訳した形でお届けします。
+                    Bloomberg、Reuters、CNBC、TheStreet、FoxBusiness、CNN,HuffPostの合計7つのサイトの最新記事をタイトルのみ翻訳した形でお届けします。
                     記事の中身は、各サイトで読んでいただきます。中身を読む際、課金を必要とするサイトもございます。購読するかどうかは、ご自身での判断を願います。
                     </div>
                     <h2>FXの予測結果</h2>
@@ -44,14 +44,20 @@ const HomeScreen = (props) => {
                         私見をnoteで、掲載しています。読んだ論文や技術について、Qiitaに投稿しています。
                     </div>
                     <div className='exsite'>
+                        <div className='exsite_grid'>
                         <Iframe 
-                            url="https://note.com/embed/notes/n5a3d966c9852" 
-                            width="100%"
-                            height='200'
-                            display="flex"
-                            margin="5px"
+                            url="https://note.com/embed/notes/n5a3d966c9852"
+                            height='200px'
                         />
-                        <ScriptTag type="text/javascript" src="https://note.com/scripts/embed.js" />
+                        <Iframe 
+                            url="https://note.com/embed/notes/n72baebdb9a70"
+                            height='200px'
+                        />
+                        <Iframe 
+                            url="https://note.com/embed/notes/n38903d05f022"
+                            height='200px'
+                        />
+                        </div>
                     </div>
 
                     <div className='exsite'>

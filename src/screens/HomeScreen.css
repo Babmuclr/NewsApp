@@ -12,6 +12,15 @@ h2{
     text-align: center;
 }
 
+.exsite_grid{
+	display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
+    justify-items: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
 .explanation{
     width: 80%;
     margin: auto;
@@ -31,4 +40,12 @@ h2{
 
 .purpose{
     font-size: 18px;
+}
+
+@media only screen and (max-width: 840px){
+    .exsite_grid{
+        margin-top: 10px;
+        grid-template-columns: repeat(auto-fit, minmax(98%, 1fr));
+        gap: 3px;
+    }
 }

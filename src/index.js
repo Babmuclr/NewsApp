@@ -41,7 +41,8 @@ render(
             <Route path="/news/cnbc/" element={<NewsScreen mode="3"/>}/>
             <Route path="/news/thestreet/" element={<NewsScreen mode="4"/>}/>
             <Route path="/news/foxbusiness/" element={<NewsScreen mode="5"/>}/>
-            <Route path="/news/wsj/" element={<NewsScreen mode="6"/>}/>
+            <Route path="/news/cnn/" element={<NewsScreen mode="6"/>}/>
+            <Route path="/news/huffpost/" element={<NewsScreen mode="7"/>}/>
         </Routes>
     </BrowserRouter>, 
     rootElement

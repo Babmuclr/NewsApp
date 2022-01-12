@@ -5,37 +5,17 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 
-import reutersURL from '../assets/reuters.png';
+import elseURL from "../assets/news2.png"
 import bloombergURL from '../assets/bloomberg.png';
-import cnbcURL from '../assets/cnbc.png';
-import thestreetURL from '../assets/thestreet.png';
-import foxbusinessURL from '../assets/foxbusiness.png';
-import wsjURL from "../assets/wsj.png";
 
 export default function MediaCard(props) {
     let src;
-    switch (props.source) {
-        case "Reuters":
-            src=reutersURL;
-            break;
-        case "Bloomberg":
-            src=bloombergURL;
-            break;
-        case "CNBC":
-            src=cnbcURL;
-            break;
-        case "TheStreet":
-            src=thestreetURL;
-            break;
-        case "FoxBusiness":
-            src=foxbusinessURL;
-            break;
-        case "TheWallStreetJournal":
-            src=wsjURL;
-            break;
-        default:
-            src=bloombergURL;
-            break;
+    if (props.source === "Bloomberg"){
+        src = bloombergURL;
+    } else if (props.top_image !== ""){
+        src = props.top_image;
+    }else {
+        src = elseURL;
     }
     const date = new Date(props.pubDate.toDate());
     return (
@@ -45,7 +25,7 @@ export default function MediaCard(props) {
                 component="img"
                 height={props.size > 500 ? 120: 75}
                 width={props.size > 500 ? 400: 150}
-                src={src}
+                image={src}
                 alt={props.id}
             />
             <CardContent>
@@ -53,7 +33,7 @@ export default function MediaCard(props) {
                     {props.title}
                 </Typography>
                 <Typography variant="caption" color="text.secondary">
-                    {date.toDateString()}
+                    {date.toDateString()} {props.source}
                 </Typography>
             </CardContent>
         </CardActionArea>

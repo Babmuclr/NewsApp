@@ -20,7 +20,8 @@ const NewsScreen = (props) => {
         "CNBC",
         "TheStreet",
         "FoxBusiness",
-        "TheWallStreetJournal",
+        "CNN",
+        "HuffPost"
     ];
     return (
         <div>
@@ -38,7 +39,8 @@ const NewsScreen = (props) => {
                     <Tab label="CNBC" component={Link} to="/news/cnbc/"/>
                     <Tab label="TheStreet" component={Link} to="/news/thestreet/"/>
                     <Tab label="FoxBusiness" component={Link} to="/news/foxbusiness/"/>
-                    <Tab label="WallStreetJournal" component={Link} to="/news/wsj/"/>
+                    <Tab label="CNN" component={Link} to="/news/cnn/"/>
+                    <Tab label="Huffpost" component={Link} to="/news/huffpost/"/>
                 </Tabs>
                 <ArticleScreen mode={list_article[Number(props.mode)]} />
                 <FootButton/>

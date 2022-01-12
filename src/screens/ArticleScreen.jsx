@@ -23,6 +23,7 @@ const ArticleScreen = props => {
                     source: doc.data().source,
                     link: doc.data().link,
                     pubDate: doc.data().pubDate,
+                    top_image: doc.data().top_image,
                 })
             });
             setArticles(nowArticles);
@@ -50,6 +51,7 @@ const ArticleScreen = props => {
                                     pubDate={article.pubDate}
                                     key={article.id}
                                     size={size.width}
+                                    top_image={article.top_image}
                                 />
                             )
                         )
