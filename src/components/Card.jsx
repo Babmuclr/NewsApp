@@ -23,10 +23,13 @@ export default function MediaCard(props) {
         <CardActionArea  href={props.link}>
             <CardMedia
                 component="img"
-                height={props.size > 500 ? 120: 75}
+                height={props.size > 500 ? 180: 120}
                 width={props.size > 500 ? 400: 150}
                 image={src}
                 alt={props.id}
+                onError={e => {
+                    e.target.src = elseURL;
+                }}
             />
             <CardContent>
                 <Typography gutterBottom variant="body2" component="div">

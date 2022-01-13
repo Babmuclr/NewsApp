@@ -16,14 +16,20 @@ const BlogScreen = (props) => {
             <Footer/>
             <div className='inner'>
                 <div className='exsite'>
+                    <div className='exsite_grid'>
                     <Iframe 
-                        url="https://note.com/embed/notes/n5a3d966c9852" 
-                        width="100%"
-                        height='200'
-                        display="flex"
-                        margin="5px"
+                        url="https://note.com/embed/notes/n5a3d966c9852"
+                        height='200px'
                     />
-                    <ScriptTag type="text/javascript" src="https://note.com/scripts/embed.js" />
+                    <Iframe 
+                        url="https://note.com/embed/notes/n72baebdb9a70"
+                        height='200px'
+                    />
+                    <Iframe 
+                        url="https://note.com/embed/notes/n38903d05f022"
+                        height='200px'
+                    />
+                    </div>
                 </div>
 
                 <div className='exsite'>

@@ -24,7 +24,7 @@ const HomeScreen = (props) => {
                     <h2>ニュースポータル</h2>
                     <div className='explanation2'>
                     アメリカでよく読まれている記事を、30分おきに更新します。
-                    Bloomberg、Reuters、CNBC、TheStreet、FoxBusiness、CNN,HuffPostの合計7つのサイトの最新記事をタイトルのみ翻訳した形でお届けします。
+                    Bloomberg、Reuters、CNBC、TheStreet、FoxBusiness、CNN, HuffPostの合計7つのサイトの最新記事をタイトルのみ翻訳した形でお届けします。
                     記事の中身は、各サイトで読んでいただきます。中身を読む際、課金を必要とするサイトもございます。購読するかどうかは、ご自身での判断を願います。
                     </div>
                     <h2>FXの予測結果</h2>

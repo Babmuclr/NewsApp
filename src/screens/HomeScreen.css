@@ -43,7 +43,7 @@ h2{
 }
 
 @media only screen and (max-width: 840px){
-    .exsite_grid{
+    .exsite_grid{   
         margin-top: 10px;
         grid-template-columns: repeat(auto-fit, minmax(98%, 1fr));
         gap: 3px;
