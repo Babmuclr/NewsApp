@@ -29,7 +29,7 @@ const HomeScreen = (props) => {
                     </div>
                     <h2>FXの予測結果</h2>
                     <div className='explanation2'>
-                    自作のFX予測器の結果と成績をまとめています。予測結果はリアルタイムで、30分毎にTwitterで公開しています。
+                    自作のFX予測器の結果と成績をまとめています。予測結果はリアルタイムで、一時間毎にTwitterで公開しています。
                         <blockquote class="twitter-tweet">
                             <p lang="ja" dir="ltr">自作AIで予測したFXの価格を投稿しています。 あくまで予測であり、投資判断は、自己判断でお願いします。損失による責任は負えません。</p>
                             &mdash; FXの預言者 (@prophetFXtrade) 

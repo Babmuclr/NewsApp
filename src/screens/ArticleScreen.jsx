@@ -7,14 +7,14 @@ import MediaCard from '../components/Card';
 
 const ArticleScreen = props => {
     const [size, setSize] = useState({ 'width': window.innerWidth, 'height': window.innerHeight });
-  window.addEventListener('resize', function () {
-    setSize({ 'width': window.innerWidth, 'height': window.innerHeight });
-  }, true);
+    window.addEventListener('resize', function () {
+        setSize({ 'width': window.innerWidth, 'height': window.innerHeight });
+    }, true);
     const [articles, setArticles] = useState([])
     useEffect(() => {
         async function fetchData() {
             const nowArticles = [];
-            const museums = query(collection(db, props.mode),orderBy("pubDate","desc"),limit(12));
+            const museums = query(collection(db, props.mode),orderBy("pubDate","desc"),limit(20));
             const querySnapshot = await getDocs(museums);
             querySnapshot.forEach((doc) => {
                 nowArticles.push({

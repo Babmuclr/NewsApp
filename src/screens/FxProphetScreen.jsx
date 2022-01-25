@@ -3,9 +3,7 @@ import React from 'react';
 import './FxProphetScreen.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer'
-import FootButton from '../components/Button';
-
-import ScriptTag from 'react-script-tag';
+import ResultTable from '../components/ResultTable';
 
 const FxProphetScreen = (props) => {
     return (
@@ -13,11 +11,8 @@ const FxProphetScreen = (props) => {
             <Header/>
             <Footer/>
             <div className='inner'>
-                <div className='timeLine'>
-                    <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/prophetFXtrade?ref_src=twsrc%5Etfw">Tweets by prophetFXtrade</a> 
-                    <ScriptTag type="text/javascript" src="https://platform.twitter.com/widgets.js" />
-                </div>
-                <FootButton/>
+                <h1>予測成績</h1>
+                <ResultTable />
             </div>
         </>
     );
