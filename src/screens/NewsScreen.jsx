@@ -23,6 +23,7 @@ const NewsScreen = (props) => {
         "CNN",
         "HuffPost"
     ];
+    
     return (
         <div>
             <Header/>
@@ -31,7 +32,8 @@ const NewsScreen = (props) => {
                     value={tabIndex}
                     onChange={handleChange}
                     variant="scrollable"
-                    scrollButtons="auto"
+                    scrollButtons
+                    allowScrollButtonsMobile
                 >
                     <Tab label="最新記事" component={Link} to="/"/>
                     <Tab label="Bloomberg" component={Link} to="/news/bloomberg/"/>
