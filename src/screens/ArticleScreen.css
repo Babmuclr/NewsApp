@@ -5,6 +5,11 @@
     justify-items: center;
     align-items: center;
     margin-top: 10px;
+    grid-auto-flow: dense;
+}
+
+.grid-item-big{
+    grid-column: span 2;
 }
 
 .loading{

@@ -41,26 +41,24 @@ const ArticleScreen = props => {
         return (
             <div className="articles">
                 <div className="grid">
-                    {articles.map(
-                            (article)=>(
-                                <MediaCard 
-                                    title={article.title} 
-                                    source={article.source} 
-                                    id={article.id} 
-                                    link={article.link}
-                                    pubDate={article.pubDate}
-                                    key={article.id}
-                                    size={size.width}
-                                    top_image={article.top_image}
-                                />
-                            )
-                        )
-                    } 
+                    {articles.map((article)=>(
+                        <div className='grid-item'>
+                            < MediaCard 
+                                title={article.title} 
+                                source={article.source} 
+                                id={article.id} 
+                                link={article.link}
+                                pubDate={article.pubDate}
+                                key={article.id}
+                                size={size.width}
+                                top_image={article.top_image}
+                            />
+                        </div>
+                    ))} 
                 </div>
             </div>
         )
     }
-    
 }
 
 export default ArticleScreen;

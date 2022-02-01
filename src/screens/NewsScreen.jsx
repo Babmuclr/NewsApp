@@ -25,7 +25,7 @@ const NewsScreen = (props) => {
     ];
     
     return (
-        <div>
+        <div className='all'>
             <Header/>
             <div className="screen">
                 <Tabs
