@@ -6,15 +6,13 @@ import './ArticleScreen.css';
 import MediaCard from '../components/Card';
 
 const ArticleScreen = props => {
-    const [size, setSize] = useState({ 'width': window.innerWidth, 'height': window.innerHeight });
-    window.addEventListener('resize', function () {
-        setSize({ 'width': window.innerWidth, 'height': window.innerHeight });
-    }, true);
+
     const [articles, setArticles] = useState([])
+    
     useEffect(() => {
         async function fetchData() {
             const nowArticles = [];
-            const museums = query(collection(db, props.mode),orderBy("pubDate","desc"),limit(20));
+            const museums = query(collection(db, props.mode),orderBy("pubDate","desc"),limit(12*props.count));
             const querySnapshot = await getDocs(museums);
             querySnapshot.forEach((doc) => {
                 nowArticles.push({
@@ -27,11 +25,14 @@ const ArticleScreen = props => {
                 })
             });
             setArticles(nowArticles);
+            console.log(props.count);
         }
         fetchData();
-      }, [props.mode]);
+        }, [props.mode, props.count]);
+        
+    
     // ここでhooksを使える
-    if (articles.length === 0) {
+    if (articles === null) {
         return (
             <div className="loading">
                 <p>ロード中</p>
@@ -42,15 +43,13 @@ const ArticleScreen = props => {
             <div className="articles">
                 <div className="grid">
                     {articles.map((article)=>(
-                        <div className='grid-item'>
+                        <div className='grid-item' key={article.id}>
                             < MediaCard 
                                 title={article.title} 
-                                source={article.source} 
-                                id={article.id} 
+                                source={article.source}
                                 link={article.link}
                                 pubDate={article.pubDate}
                                 key={article.id}
-                                size={size.width}
                                 top_image={article.top_image}
                             />
                         </div>

@@ -23,8 +23,8 @@ export default function MediaCard(props) {
         <CardActionArea  href={props.link}>
             <CardMedia
                 component="img"
-                height={props.size > 500 ? 180: 120}
-                width={props.size > 500 ? 400: 150}
+                height={180}
+                width={400}
                 image={src}
                 alt={props.id}
                 onError={e => {
