@@ -8,8 +8,18 @@
     grid-auto-flow: dense;
 }
 
+.grid-item{
+    /* border: 2px solid black; */
+}
+
 .grid-item-big{
     grid-column: span 2;
+    /* border: 2px solid black; */
+}
+.grid-item-biger{
+    grid-column: span 2;
+    grid-row: span 2;
+    /* border: 2px solid black; */
 }
 
 .loading{

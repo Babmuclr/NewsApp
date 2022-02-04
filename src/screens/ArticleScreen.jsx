@@ -12,7 +12,7 @@ const ArticleScreen = props => {
     useEffect(() => {
         async function fetchData() {
             const nowArticles = [];
-            const museums = query(collection(db, props.mode),orderBy("pubDate","desc"),limit(12*props.count));
+            const museums = query(collection(db, props.mode),orderBy("pubDate","desc"),limit(14*props.count));
             const querySnapshot = await getDocs(museums);
             querySnapshot.forEach((doc) => {
                 nowArticles.push({
@@ -42,7 +42,36 @@ const ArticleScreen = props => {
         return (
             <div className="articles">
                 <div className="grid">
-                    {articles.map((article)=>(
+                    {articles.map((article, idx)=>(
+                        idx % 7 === 0 ? 
+                        <div className='grid-item-biger' key={article.id}>
+                            < MediaCard 
+                                title={article.title} 
+                                source={article.source}
+                                link={article.link}
+                                pubDate={article.pubDate}
+                                key={article.id}
+                                top_image={article.top_image}
+                                scopex={2}
+                                scopey={3}
+                                version="square"
+                            />
+                        </div>
+                        : idx % 7 === 3 || idx % 7 === 4 ?
+                        <div className='grid-item-big' key={article.id}>
+                            < MediaCard 
+                                title={article.title} 
+                                source={article.source}
+                                link={article.link}
+                                pubDate={article.pubDate}
+                                key={article.id}
+                                top_image={article.top_image}
+                                scopex={2}
+                                scopey={1}
+                                version="rectangle"
+                            />
+                        </div>
+                        :
                         <div className='grid-item' key={article.id}>
                             < MediaCard 
                                 title={article.title} 
@@ -51,6 +80,9 @@ const ArticleScreen = props => {
                                 pubDate={article.pubDate}
                                 key={article.id}
                                 top_image={article.top_image}
+                                scopex={1}
+                                scopey={1}
+                                version="square"
                             />
                         </div>
                     ))} 

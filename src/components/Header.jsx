@@ -1,12 +1,18 @@
 import React from 'react';
-import titleImg from "../assets/news.png";
-import "./Header.css";
-
 
 const Header = () => {
     return (
-    <div className="header">   
-        <h1><img src={titleImg} width="50%"  alt="logo" /></h1>
+    <div style={{
+        width: "96%",
+        margin: "auto",
+        borderBottom: "2px solid black",
+    }}>   
+        <div style={{
+            margin: "auto",
+            fontFamily: "游ゴシック体",
+            fontSize: 54,
+            fontWeight: "bolder",
+        }}>世界経済新聞</div>
     </div>
   );
 }

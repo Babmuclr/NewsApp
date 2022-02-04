@@ -9,7 +9,9 @@ const AddButton = (props) => {
         style={{
             width: "100%",
             marginTop: "40px",
-            height: "60px"
+            height: "60px",
+            color: "black",
+            borderColor: "black",
         }}
         >
             追加の記事を閲覧する
