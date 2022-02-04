@@ -3,7 +3,6 @@ import './HomeScreen.css';
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import FootButton from '../components/Button';
 import ScriptTag from 'react-script-tag';
 import Iframe from 'react-iframe';
 
@@ -69,7 +68,6 @@ const HomeScreen = (props) => {
                     <div className='explanation'>
                         皆様の知識を高め、興味を持つ記事に出会えることを祈っています。
                     </div>
-                    <FootButton/>
                 </div>
             </div>
         </>

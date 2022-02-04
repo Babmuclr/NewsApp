@@ -19,11 +19,11 @@ export default function MediaCard(props) {
     }
     const date = new Date(props.pubDate.toDate());
     return (
-        <Card sx={{ maxWidth: 800, maxHeight: 300, margin: 0}}>
+        <Card sx={{ maxWidth: 400, maxHeight: 300, margin: 0}}>
         <CardActionArea  href={props.link}>
             <CardMedia
                 component="img"
-                height={180}
+                height={160}
                 width={400}
                 image={src}
                 alt={props.id}

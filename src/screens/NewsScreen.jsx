@@ -6,7 +6,6 @@ import './NewsScreen.css';
 import ArticleScreen from './ArticleScreen';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import FootButton from '../components/Button';
 import AddButton from '../components/AddButton';
 
 const NewsScreen = (props) => {
@@ -48,7 +47,6 @@ const NewsScreen = (props) => {
                 </Tabs>
                 <ArticleScreen mode={list_article[Number(props.mode)]} count={count}/>
                 <AddButton func={() => setCount(count + 1)}/>
-                <FootButton/>
             </div>
             <Footer/>
         </div>
