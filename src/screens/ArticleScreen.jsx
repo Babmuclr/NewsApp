@@ -57,20 +57,20 @@ const ArticleScreen = props => {
                                 version="square"
                             />
                         </div>
-                        : idx % 7 === 3 || idx % 7 === 4 ?
-                        <div className='grid-item-big' key={article.id}>
-                            < MediaCard 
-                                title={article.title} 
-                                source={article.source}
-                                link={article.link}
-                                pubDate={article.pubDate}
-                                key={article.id}
-                                top_image={article.top_image}
-                                scopex={2}
-                                scopey={1}
-                                version="rectangle"
-                            />
-                        </div>
+                        // : idx % 7 === 3 || idx % 7 === 4 ?
+                        // <div className='grid-item-big' key={article.id}>
+                        //     < MediaCard 
+                        //         title={article.title} 
+                        //         source={article.source}
+                        //         link={article.link}
+                        //         pubDate={article.pubDate}
+                        //         key={article.id}
+                        //         top_image={article.top_image}
+                        //         scopex={2}
+                        //         scopey={1}
+                        //         version="rectangle"
+                        //     />
+                        // </div>
                         :
                         <div className='grid-item' key={article.id}>
                             < MediaCard 

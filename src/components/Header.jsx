@@ -6,6 +6,7 @@ const Header = () => {
         width: "96%",
         margin: "auto",
         borderBottom: "2px solid black",
+        textAlign: "center",
     }}>   
         <div style={{
             margin: "auto",

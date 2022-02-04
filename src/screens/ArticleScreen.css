@@ -8,9 +8,9 @@
     grid-auto-flow: dense;
 }
 
-.grid-item{
-    /* border: 2px solid black; */
-}
+/* .grid-item{
+    border: 2px solid black;
+} */
 
 .grid-item-big{
     grid-column: span 2;

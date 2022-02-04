@@ -10,7 +10,7 @@ const HomeScreen = (props) => {
     return (
         <>
             <Header />
-            <Footer/>
+            <Footer />
             <div className="inner">
                 <div>
                     <h1>本サイトの目的</h1>
