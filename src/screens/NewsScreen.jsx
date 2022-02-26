@@ -10,8 +10,11 @@ import AddButton from '../components/AddButton';
 import {useWindowSize} from 'react-use';
 
 const NewsScreen = (props) => {
+    // 画面の大きさを検知する
     const { width, height } = useWindowSize();
     useEffect(() => {}, [width, height]);
+    
+    // ページの変更 
     const [count, setCount] = useState(1)
     const [tabIndex, setTabIndex] = useState(Number(props.mode));
     const handleChange = (event, newValue) => {
@@ -21,11 +24,14 @@ const NewsScreen = (props) => {
         "importants",
         "Bloomberg",
         "Reuters",
+        "WashingtonPost",
         "CNBC",
         "TheStreet",
         "FoxBusiness",
         "CNN",
-        "HuffPost"
+        "HuffPost",
+        "BusinessInsider",
+        "MotleyFool",
     ];
     
     return (
@@ -33,30 +39,7 @@ const NewsScreen = (props) => {
         {/* backgroundColor:"#DDDDDD"}}> */}
             <Header/>
             <div className="screen">
-                {width > 500 ?  <div style={{
-                    margin: "auto",
-                    borderBottom: "2px solid black",}}>
-                    <Tabs
-                        value={tabIndex}
-                        onChange={handleChange}
-                        centered
-                        TabIndicatorProps={{
-                            style: {
-                                height:0,
-                            }
-                        }}
-                    >
-                        <Tab label="最新記事" component={Link} to="/" onClick={() => setCount(1)}/>
-                        <Tab label="Bloomberg" component={Link} to="/news/bloomberg/" onClick={() => setCount(1)}/>
-                        <Tab label="Reuters" component={Link} to="/news/reuters/" onClick={() => setCount(1)}/>
-                        <Tab label="CNBC" component={Link} to="/news/cnbc/" onClick={() => setCount(1)}/>
-                        <Tab label="TheStreet" component={Link} to="/news/thestreet/" onClick={() => setCount(1)}/>
-                        <Tab label="FoxBusiness" component={Link} to="/news/foxbusiness/" onClick={() => setCount(1)}/>
-                        <Tab label="CNN" component={Link} to="/news/cnn/" onClick={() => setCount(1)}/>
-                        <Tab label="Huffpost" component={Link} to="/news/huffpost/" onClick={() => setCount(1)}/>
-                    </Tabs>
-                </div>
-                :  <div style={{
+                <div style={{
                     margin: "auto",
                     borderBottom: "2px solid black",}}>
                     <Tabs
@@ -72,15 +55,17 @@ const NewsScreen = (props) => {
                         <Tab label="最新記事" component={Link} to="/" onClick={() => setCount(1)}/>
                         <Tab label="Bloomberg" component={Link} to="/news/bloomberg/" onClick={() => setCount(1)}/>
                         <Tab label="Reuters" component={Link} to="/news/reuters/" onClick={() => setCount(1)}/>
+                        <Tab label="WashingtonPost" component={Link} to="/news/washingtonpost/" onClick={() => setCount(1)}/>
                         <Tab label="CNBC" component={Link} to="/news/cnbc/" onClick={() => setCount(1)}/>
                         <Tab label="TheStreet" component={Link} to="/news/thestreet/" onClick={() => setCount(1)}/>
                         <Tab label="FoxBusiness" component={Link} to="/news/foxbusiness/" onClick={() => setCount(1)}/>
                         <Tab label="CNN" component={Link} to="/news/cnn/" onClick={() => setCount(1)}/>
                         <Tab label="Huffpost" component={Link} to="/news/huffpost/" onClick={() => setCount(1)}/>
+                        <Tab label="BusinessInsider" component={Link} to="/news/businessinsider/" onClick={() => setCount(1)}/>
+                        <Tab label="MotleyFool" component={Link} to="/news/motleyfool/" onClick={() => setCount(1)}/>
                     </Tabs>
                 </div>
-                }
-                <ArticleScreen mode={list_article[Number(props.mode)]} count={count}/>
+                <ArticleScreen mode={list_article[Number(props.mode)]} count={count} width={width}/>
                 <AddButton func={() => setCount(count + 1)}/>
             </div>
             <Footer/>

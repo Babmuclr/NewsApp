@@ -55,8 +55,10 @@ const ArticleScreen = props => {
                                 scopex={2}
                                 scopey={3}
                                 version="square"
+                                width = {props.width}
                             />
                         </div>
+                        // 横長のカードを作りたい
                         // : idx % 7 === 3 || idx % 7 === 4 ?
                         // <div className='grid-item-big' key={article.id}>
                         //     < MediaCard 
@@ -83,6 +85,7 @@ const ArticleScreen = props => {
                                 scopex={1}
                                 scopey={1}
                                 version="square"
+                                width = {props.width}
                             />
                         </div>
                     ))} 

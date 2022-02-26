@@ -18,31 +18,65 @@ export default function MediaCard(props) {
     }
     const date = new Date(props.pubDate.toDate());
     return (
-        <Card sx={{ maxWidth: 400*props.scopex, maxHeight: 400*props.scopey, margin: 0}} variant="outlined">
-            <CardActionArea  href={props.link}>
-                <div>
-                    <CardMedia
-                    component="img"
-                    height={140*props.scopey}
-                    width={400*props.scopex}
-                    image={src}
-                    alt={props.id}
-                    onError={e => {
-                        e.target.src = elseURL;
-                    }}
-                    />
-                    <CardContent>
+        props.width > 640 ? 
+            <Card sx={{ maxWidth: 400*props.scopex, maxHeight: 400*props.scopey, margin: 0}} variant="outlined">
+                <CardActionArea  href={props.link}>
                     <div>
-                        <div style={{fontFamily:"HG明朝E", fontWeight:"bold", fontSize:18+(props.scopey-1)*3 }}>
-                            {props.title} 
+                        <CardMedia
+                            component="img"
+                            height={140*props.scopey}
+                            width={400*props.scopex}
+                            image={src}
+                            alt={props.id}
+                            onError={e => {
+                                e.target.src = elseURL;
+                            }}
+                        />
+                        <CardContent>
+                        <div>
+                            <div style={{
+                                fontFamily:"HG明朝E", 
+                                fontWeight:"bold", 
+                                fontSize:18+(props.scopey-1)*3 }}>
+                                {props.title} 
+                            </div>
+                            <div style={{fontFamily:"HG明朝E", fontWeight:"light", fontSize:12+props.scope*3, color:'gray' }}>
+                                {date.toDateString()} {props.source}
+                            </div>
                         </div>
-                        <div style={{fontFamily:"HG明朝E", fontWeight:"light", fontSize:12+props.scope*3, color:'gray' }}>
-                            {date.toDateString()} {props.source}
-                        </div>
+                        </CardContent>
                     </div>
-                    </CardContent>
-                </div>
-            </CardActionArea>
-        </Card>
+                </CardActionArea>
+            </Card>
+        :
+            <Card sx={{ maxWidth: 400*props.scopex, maxHeight: 400*props.scopey, margin: 0}} variant="outlined">
+                <CardActionArea  href={props.link}>
+                    <div>
+                        <CardMedia
+                            component="img"
+                            height={140*props.scopey*0.6}
+                            width={400*props.scopex}
+                            image={src}
+                            alt={props.id}
+                            onError={e => {
+                                e.target.src = elseURL;
+                            }}
+                        />
+                        <CardContent>
+                        <div>
+                            <div style={{
+                                fontFamily:"HG明朝E", 
+                                fontWeight:"bold", 
+                                fontSize:16}}>
+                                {props.title} 
+                            </div>
+                            <div style={{fontFamily:"HG明朝E", fontWeight:"light", fontSize:10, color:'gray' }}>
+                                {date.toDateString()} {props.source}
+                            </div>
+                        </div>
+                        </CardContent>
+                    </div>
+                </CardActionArea>
+            </Card>
     );
 }
